@@ -598,5 +598,26 @@
         "sec-fetch-site": "cross-site",
         "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
     }
+},
+    {
+    "name": "Tokopedia",
+    "method": "post",
+    "url": "https://accounts.tokopedia.com/otp/c/ajax/request-wa",
+    "data": "otp_type=116&msisdn=target_number&tk=extracted_token&email=&original_param=&user_id=&signature=&number_otp_digit=6",
+    "headers": {
+        "Connection": "keep-alive",
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Origin": "https://accounts.tokopedia.com",
+        "X-Requested-With": "XMLHttpRequest",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "Accept-Encoding": "gzip, deflate"
+    },
+    "pre_request": {
+        "method": "get",
+        "url": "https://accounts.tokopedia.com/otp/c/page?otp_type=116&msisdn=target_number&ld=https%3A%2F%2Faccounts.tokopedia.com%2Fregister%3Ftype%3Dphone%26phone%3D{}%26status%3DeyJrIjp0cnVlLCJtIjp0cnVlLCJzIjpmYWxzZSwiYm90IjpmYWxzZSwiZ2MiOmZhbHNlfQ%253D%253D",
+        "extract_token": "regex_pattern_for_tk_value",
+        "sleep": 30
+    }
 }
 ]
